@@ -1,14 +1,17 @@
 from random import randint, seed
-from models import grid
+from models import grid, weighted_grid
 
 seed(69)
 
 # Creates a grid object with random walls
 # using x and y as dimension parameters
 # Returns a grid object
-def createGrid(x, y):
+def createGrid(x, y, algorithm):
     # initialize grid
-    outputGrid = grid.Grid(x, y)
+    if algorithm == 'breadth_first':
+        outputGrid = grid.Grid(x, y)
+    else:
+        outputGrid = weighted_grid.WeightedGrid(x,y) 
 
     # initialize a random list of walls
     # so as to not fill the whole grid with walls
