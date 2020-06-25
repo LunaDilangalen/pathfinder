@@ -38,7 +38,7 @@ def main():
     # and a list of nodes that constitute the shortest path
     cost, path = pathfinder(
                     algorithm=algorithm,
-                    graph=graph,
+                    graph=sampleGrid,
                     start=start,
                     end=end
                 )
