@@ -33,11 +33,21 @@ def createGrid(x, y, algorithm):
     outputGrid.walls = randomWalls
 
     return outputGrid
-def drawGrid(grid):
+def drawGrid(grid, start, goal, cost=None, path=None):
     for y in range(grid.height):
         for x in range(grid.width):
             if grid.passable((x,y)):
-                print('- ',end='')
+                if cost is not None:
+                    print('%s ' % str(cost[(x,y)]),end='')
+                if path and (x,y) in path:
+                    if (x,y) == start:
+                        print('S ',end='')
+                    elif (x,y) == goal:
+                        print('G ',end='')
+                    else:
+                        print('@ ',end='')
+                else:
+                    print('- ',end='')
             elif not grid.passable((x,y)):
                 print('# ',end='')
         print('')
