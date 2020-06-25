@@ -11,5 +11,5 @@ class WeightedGrid(Grid):
         super().__init__(width, height)
         self.weights = {}
     def cost(self, fromNode, toNode):
-        return self.weights.get(toNode, 10)
+        return self.weights.get(toNode, 1)
         
