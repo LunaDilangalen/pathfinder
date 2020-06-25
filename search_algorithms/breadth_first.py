@@ -13,7 +13,6 @@ def search(graph, start, goal):
         # Early exit, optional for BFS
         if current == goal:
             print('Found goal %s' % str(current))
-            break
         for next in graph.neighbors(current):
             if next not in cameFrom:
                 frontier.put(next)

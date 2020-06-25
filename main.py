@@ -18,20 +18,10 @@ def main():
     Input: algorithm to use, start node, end node
     Output: Cost of the Path, List of nodes to pass through
     '''
-    # initialize graph
-    graph = G.Graph()
-    graph.edges = {
-        'A' : ['B'],
-        'B' : ['A','C','D'],
-        'C' : ['A'],
-        'D' : ['E','A'],
-        'E' : ['B'],
-    }
-    print(graph)
-    
     # initialize grid
     sampleGrid = helper.createGrid(20,20)
     helper.drawGrid(sampleGrid)
+    
     # find the shortest path
     # parameters: algorithm, graph, start, end
     # returns the cost of the path
