@@ -1,7 +1,7 @@
 import os, math, argparse
 from pathfinder import pathfinder
-from models import graph as G
-
+from models import graph as G 
+from models import grid
 def main():
     # print('This is an implementation of the several pathfinding algorithms (e.g. Djikstra, A*)')
     parser = argparse.ArgumentParser(description='Simulate sending locational data to the NIMPA server.')
@@ -27,6 +27,12 @@ def main():
         'E' : ['B'],
     }
     print(graph)
+    
+    # initialize grid
+    sample_grid = grid.Grid(20, 20)
+    print(sample_grid)
+    # grid.walls = WALLS # create a list of walls
+    # draw_grid(grid)
 
     # find the shortest path
     # parameters: algorithm, graph, start, end
