@@ -20,7 +20,7 @@ def main():
     '''
     # initialize grid
     sampleGrid = helper.createGrid(20,20,algorithm)
-    helper.drawGrid(sampleGrid)
+    # helper.drawGrid(sampleGrid, start, goal)
     
     # find the shortest path
     # parameters: algorithm, graph, start, end
@@ -32,6 +32,8 @@ def main():
                     start=start,
                     goal=goal
                 )
-    print('cost: ', cost, 'path: ', path)
+    # helper.drawGrid(sampleGrid, cost=cost)
+    helper.drawGrid(sampleGrid, start, goal, path=path)
+    # print('cost: ', cost, 'path: ', path)
 if __name__ == "__main__":
     main()
