@@ -19,7 +19,7 @@ def main():
     Output: Cost of the Path, List of nodes to pass through
     '''
     # initialize grid
-    sampleGrid = helper.createGrid(20,20)
+    sampleGrid = helper.createGrid(20,20,algorithm)
     helper.drawGrid(sampleGrid)
     
     # find the shortest path
