@@ -32,7 +32,12 @@ def main():
     # parameters: algorithm, graph, start, end
     # returns the cost of the path
     # and a list of nodes that constitute the shortest path
-    cost, path = pathfinder(algorithm=algorithm,start=start,end=end)
+    cost, path = pathfinder(
+                    algorithm=algorithm,
+                    graph=graph,
+                    start=start,
+                    end=end
+                )
     print('cost: ', cost, 'path: ', path)
 if __name__ == "__main__":
     main()
