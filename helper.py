@@ -13,9 +13,9 @@ def createGrid(x, y):
     # initialize a random list of walls
     # so as to not fill the whole grid with walls
     # walls list must have length = (xy)/2
-    N = int((x*y)/4) 
+    N = int((x*y)/8) 
     randomWalls = [0]*N
-    print(len(randomWalls))
+    # print(len(randomWalls))
 
     for i in range(N):
         # change the initial value to a tuple with random (x,y)
@@ -26,8 +26,8 @@ def createGrid(x, y):
             random_x = randint(0, x-1)
             random_y = randint(0, y-1)
         randomWalls[i] = (random_x, random_y)
-    print(randomWalls)
-    # outputGrid.walls = randomWalls
+    # print(randomWalls)
+    outputGrid.walls = randomWalls
 
     return outputGrid
 def drawGrid(grid):
