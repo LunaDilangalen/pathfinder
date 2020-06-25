@@ -38,3 +38,13 @@ def drawGrid(grid):
             elif not grid.passable((x,y)):
                 print('# ',end='')
         print('')
+
+def reconstructPath(cameFrom, start, goal):
+    current = goal
+    path = []
+    while current != start:
+        path.append(current)
+        current = cameFrom[current]
+    path.append(start)
+    path.reverse()
+    return path
