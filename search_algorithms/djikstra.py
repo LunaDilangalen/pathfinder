@@ -12,6 +12,7 @@ def search(graph, start, goal):
         current = frontier.get()
         # Early exit condition, optional for Djikstra
         if current == goal:
+            print('Found goal %s' % str(current))
             break
         for next in graph.neighbors(current):
             newCost = costSoFar[current] + graph.cost(current, next)
